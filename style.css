@@ -19,6 +19,11 @@ input{
     display: flex;
     border-radius: 20px;
     border: 4px solid #113f67;
+    transition: 0.5s;
+}
+input:hover {
+    background: #bbbbbb;
+    transition: 0.5s;
 }
 label {
     width: 80%;
