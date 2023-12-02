@@ -63,3 +63,19 @@ button:hover {
     color: white;
     transition: 0.5s;
 }
+footer {
+    position: absolute;
+    bottom: 5px;
+    transition: 0.25s;
+    font-size: 20px;
+}
+footer:hover {
+    font-size: 25px;
+    opacity: .7;
+    transition: 0.5s;
+}
+a {
+    text-decoration: none;
+    color: #113f67;
+    
+}
