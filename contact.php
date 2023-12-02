@@ -18,27 +18,64 @@
         align-items: center;
         background: #e7eaf6;
     }
+    .card {
+        margin-top: 10vh;
+        width: 25%;
+        height: 50vh;
+        padding: 10vh;
+        background: #38598b;
+        border-radius: 50px;
+        display: block;
+        align-items: center;
+        color: #e7eaf6;
+        line-height: 10vh;
+        text-align: center;
+    }
+    h1, h2 {
+        margin-bottom: 4vh;
+        margin-top: 10vh;
+        animation: customAni 2s ease 0s  normal none;
+    }
+    h1 {
+        font-size: 40px
+    }
+    h2 {
+        font-size: 20px
+    }
+    @keyframes customAni {
+  0% {
+	transform: scale(0.5);
+  }
+
+  100% {
+	transform: scale(1);
+  }
+}
+
     </style>
 </head>
 <body>
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = htmlspecialchars($_POST["login"]);
-    $email = htmlspecialchars($_POST["email"]);
-    $pass = htmlspecialchars($_POST["haslo"]);
+    <div class="card">
+    <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $name = htmlspecialchars($_POST["login"]);
+            $email = htmlspecialchars($_POST["email"]);
+            $pass = htmlspecialchars($_POST["haslo"]);
 
-    if (empty($name) || empty($email) || empty($pass)) {
-        echo "Wszystkie pola formularza muszą być wypełnione.";
-    } else {
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            echo "Podany adres e-mail jest nieprawidłowy.";
-        } else {
-            echo "<h1>Witaj $name <br></h1>";
-            echo "<h2>Miło znów cię widzieć <3</h2>";
+            if (empty($name) || empty($email) || empty($pass)) {
+                echo "Wszystkie pola formularza muszą być wypełnione.";
+            } else {
+                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    echo "Podany adres e-mail jest nieprawidłowy.";
+                } else {
+                    echo "<h1>Witaj $name <br></h1>";
+                    echo "<h2>Miło znów cię widzieć <3</h2>";
+                }
+            }
         }
-    }
-}
-?>
+    ?>
+    </div>
+
 
 </body>
 </html>
