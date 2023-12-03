@@ -19,9 +19,9 @@
         background: #e7eaf6;
     }
     .card {
-        margin-top: 10vh;
+        margin-top: 5vh;
         width: 25%;
-        height: 50vh;
+        height: 60vh;
         padding: 10vh;
         background: #38598b;
         border-radius: 50px;
