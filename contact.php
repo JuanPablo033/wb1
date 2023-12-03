@@ -61,18 +61,27 @@
             $name = htmlspecialchars($_POST["login"]);
             $email = htmlspecialchars($_POST["email"]);
             $pass = htmlspecialchars($_POST["haslo"]);
+            $wiek = htmlspecialchars($_POST["wiek"]);
 
-            if (empty($name) || empty($email) || empty($pass)) {
-                echo "Wszystkie pola formularza muszą być wypełnione.";
-            } else {
-                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                    echo "Podany adres e-mail jest nieprawidłowy.";
+            if ($wiek < 18) {
+                echo '<h1 style="color: red;">Dostęp zabroniony</h1>';
+            } else  {
+                if (empty($name) || empty($email) || empty($pass)) {
+                    echo "Wszystkie pola formularza muszą być wypełnione.";
                 } else {
-                    echo "<h1>Witaj $name <br></h1>";
-                    echo "<h2>Miło znów cię widzieć <3</h2>";
+                    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                        echo "Podany adres e-mail jest nieprawidłowy.";
+                    } else {
+                        echo "<h1>Witaj $name <br></h1>";
+                        echo "<h2>Miło znów cię widzieć <3</h2>";
+                    }
                 }
             }
-        }
+            }
+                
+
+            
+        
     ?>
     </div>
 
