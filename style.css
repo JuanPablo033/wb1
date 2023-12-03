@@ -13,8 +13,8 @@ body {
 }
 input{
     width: 80%;
-    height: 6vh;
-    padding: 15px;
+    height: 4vh;
+    padding: 10px;
     font-size: 2rem;
     display: flex;
     border-radius: 20px;
@@ -37,9 +37,9 @@ label {
     text-shadow: 3px 3px 1px #113f67;
 }
 .card {
-    margin-top: 10vh;
+    margin-top: 5vh;
     width: 25%;
-    height: 50vh;
+    height: 60vh;
     padding: 10vh;
     background: #38598b;
     border-radius: 50px;
