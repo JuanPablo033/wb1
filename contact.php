@@ -60,13 +60,9 @@
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $name = htmlspecialchars($_POST["login"]);
             $email = htmlspecialchars($_POST["email"]);
-            $pass = htmlspecialchars($_POST["haslo"]);
-            $wiek = htmlspecialchars($_POST["wiek"]);
+            $pass = htmlspecialchars($_POST["haslo"]); 
 
-            if ($wiek < 18) {
-                echo '<h1 style="color: red;">Dostęp zabroniony</h1>';
-            } else  {
-                if (empty($name) || empty($email) || empty($pass)) {
+            if (empty($name) || empty($email) || empty($pass)) {
                     echo "Wszystkie pola formularza muszą być wypełnione.";
                 } else {
                     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -77,7 +73,7 @@
                     }
                 }
             }
-            }
+            
                 
 
             

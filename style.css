@@ -9,7 +9,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #e7eaf6;
+    background:  #eeeeee;
 }
 input{
     width: 80%;
@@ -18,7 +18,7 @@ input{
     font-size: 2rem;
     display: flex;
     border-radius: 20px;
-    border: 4px solid #113f67;
+    border: 4px solid #222831;
     transition: 0.5s;
 }
 input:hover {
@@ -34,14 +34,13 @@ label {
     color: #e7eaf6;
     position: relative;
     top: 3vh;
-    text-shadow: 3px 3px 1px #113f67;
+    text-shadow: 3px 3px 1px #222831;
 }
 .card {
-    margin-top: 5vh;
     width: 25%;
     height: 60vh;
     padding: 10vh;
-    background: #38598b;
+    background: #393e46;
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -53,13 +52,13 @@ button {
     width: 50%;
     height: 4vh;
     border-radius: 50px;
-    border: 4px solid #113f67;
+    border: 4px solid #222831;
     font-size: 20px;
     cursor: pointer;
     transition: 0.5s;
 }
 button:hover {
-    background-color: #113f67;
+    background-color: #222831;
     color: white;
     transition: 0.5s;
 }
@@ -76,6 +75,29 @@ footer:hover {
 }
 a {
     text-decoration: none;
-    color: #113f67;
+    color: #222831;
     
+}
+header {
+    display: flex;
+    height: 5vh;
+    width: 100%;
+}
+header h1 {
+    font-size: 30px;
+    transition: 0.5s;
+    position: absolute;
+    left: 1vh;
+    top: 1vh;
+}   
+header h1:hover {
+    font-size: 40px;
+    transition: 0.5s;
+
+}
+header img {
+    width: 40px;
+    position: absolute;
+    right: 1vh;
+    top: 1vh;
 }
